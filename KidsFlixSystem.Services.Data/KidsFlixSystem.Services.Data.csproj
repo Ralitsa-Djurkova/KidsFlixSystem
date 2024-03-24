@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KidsFlixSystem.Common\KidsFlixSystem.Common.csproj" />
+    <ProjectReference Include="..\KidsFlixSystem.Data.Models\KidsFlixSystem.Data.Models.csproj" />
+    <ProjectReference Include="..\KidsFlixSystem.Data\KidsFlixSystem.Data.csproj" />
+    <ProjectReference Include="..\KidsFlixSystem.Web.ViewModels\KidsFlixSystem.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>
