@@ -1,4 +1,5 @@
-﻿using KidsFlixSystem.Web.ViewModels.Home;
+﻿using KidsFlixSystem.Data.Models;
+using KidsFlixSystem.Web.ViewModels.Home;
 
 namespace KidsFlixSystem.Services.Data.Interfaces
 {

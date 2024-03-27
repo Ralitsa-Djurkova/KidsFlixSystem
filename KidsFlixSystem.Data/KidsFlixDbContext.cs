@@ -1,8 +1,6 @@
 ﻿namespace KidsFlixSystem.Data
 {
-    using KidsFlixSystem.Data.Configurations;
     using KidsFlixSystem.Data.Models;
-    using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;

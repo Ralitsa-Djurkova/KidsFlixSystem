@@ -1,10 +1,8 @@
 ﻿namespace KidsFlixSystem.Data.Models
 {
-    using System.ComponentModel.DataAnnotations.Schema;
     using System.ComponentModel.DataAnnotations;
-
+    using System.ComponentModel.DataAnnotations.Schema;
     using static KidsFlixSystem.Common.EntityValidationConstants.Review;
-    using Microsoft.AspNet.Identity.EntityFramework;
 
     public class Review
     {

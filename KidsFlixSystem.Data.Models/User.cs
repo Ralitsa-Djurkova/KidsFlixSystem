@@ -1,6 +1,5 @@
 ﻿namespace KidsFlixSystem.Data.Models
 {
-    using Microsoft.AspNet.Identity.EntityFramework;
     using System.ComponentModel.DataAnnotations;
 
     using static KidsFlixSystem.Common.EntityValidationConstants.User;

@@ -3,22 +3,24 @@
     using KidsFlixSystem.Data;
     using KidsFlixSystem.Services.Data.Interfaces;
     using KidsFlixSystem.Web.ViewModels.Home;
-    using System.Data.Entity;
+    using Microsoft.EntityFrameworkCore;
 
-
+    
     public class MovieService : IMovieService
     {
-        private readonly KidsFlixDbContext _dbContext;
+        private readonly KidsFlixDbContext context;
 
         public MovieService(KidsFlixDbContext dbContex)
         {
-            _dbContext = dbContex;
+            context = dbContex;
         }
         public async Task<IEnumerable<IndexViewModel>> LastTwoMovie()
         {
-            IEnumerable<IndexViewModel> lastTwoMovies = await this._dbContext
+            
+
+            var lastTwoMovies = await this.context
                 .Movies
-                .OrderByDescending(x => x.Id)
+                .OrderByDescending(x => x.ReleaseDate)
                 .Take(2)
                 .Select(x => new IndexViewModel()
                 {

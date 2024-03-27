@@ -1,5 +1,7 @@
 ﻿namespace KidsFlixSystem.Web.Infrastructure.Extentions
 {
+    using KidsFlixSystem.Services.Data;
+    using KidsFlixSystem.Services.Data.Interfaces;
     using Microsoft.Extensions.DependencyInjection;
     
     using System.Reflection;
@@ -27,7 +29,7 @@
 
             foreach(Type type in serviceTypes)
             {
-                Type? interfaceType = type.GetInterface($"{type.Name}");
+                Type? interfaceType = type.GetInterface($"I{type.Name}");
                 if(interfaceType == null)
                 {
                     throw new InvalidOperationException($"No interface is provided for the service with name:{type.Name}");

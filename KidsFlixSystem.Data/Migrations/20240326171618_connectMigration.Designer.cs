@@ -4,6 +4,7 @@ using KidsFlixSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KidsFlixSystem.Data.Migrations
 {
     [DbContext(typeof(KidsFlixDbContext))]
-    partial class KidsFlixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240326171618_connectMigration")]
+    partial class connectMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
