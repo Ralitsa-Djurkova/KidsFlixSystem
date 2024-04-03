@@ -9,6 +9,7 @@
     {
         public void Configure(EntityTypeBuilder<ActorInMovie> builder)
         {
+            builder.HasData(GetActorInMovie());
             builder
                .HasKey(a => new { a.ActorId, a.MovieId });
 
@@ -23,6 +24,27 @@
                 .HasOne(m => m.Movie)
                 .WithMany(m => m.ActorInMovies)
                 .HasForeignKey(m => m.MovieId);
+        }
+
+        private ActorInMovie[] GetActorInMovie()
+        {
+            ICollection<ActorInMovie> actorsInmovies = new List<ActorInMovie>();
+            ActorInMovie actor;
+
+            actor = new ActorInMovie
+            {
+                ActorId = 1,
+                MovieId = 1,
+            };
+            actorsInmovies.Add(actor);
+            actor = new ActorInMovie
+            {
+                ActorId = 2,
+                MovieId = 2,
+            };
+            actorsInmovies.Add(actor);
+
+            return actorsInmovies.ToArray();
         }
     }
 }

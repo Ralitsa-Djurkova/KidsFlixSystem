@@ -4,6 +4,7 @@ using KidsFlixSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KidsFlixSystem.Data.Migrations
 {
     [DbContext(typeof(KidsFlixDbContext))]
-    partial class KidsFlixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240403152029_changeTrailer")]
+    partial class changeTrailer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,44 +45,6 @@ namespace KidsFlixSystem.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Actors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            FullName = "Brat Garett",
-                            PhotoUrl = "https://www.imdb.com/name/nm0004951/mediaviewer/rm733221376/?ref_=nm_ov_ph"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            FullName = "Lou Romano",
-                            PhotoUrl = "https://www.imdb.com/name/nm0738918/mediaviewer/rm3395136000/?ref_=nm_ov_ph"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            FullName = "Patton Oswalt",
-                            PhotoUrl = "https://www.imdb.com/name/nm0652663/mediaviewer/rm532898048/?ref_=nm_ov_ph"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            FullName = "Ginnifer Goodwin",
-                            PhotoUrl = "https://www.imdb.com/name/nm0329481/mediaviewer/rm1880188672/?ref_=nm_ov_ph"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            FullName = "Jason Bateman",
-                            PhotoUrl = "https://www.imdb.com/name/nm0000867/mediaviewer/rm2064810496/?ref_=nm_ov_ph"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            FullName = "Idris Elba",
-                            PhotoUrl = "https://www.imdb.com/name/nm0252961/mediaviewer/rm1950723072/?ref_=nm_ov_ph"
-                        });
                 });
 
             modelBuilder.Entity("KidsFlixSystem.Data.Models.ActorInMovie", b =>
@@ -239,7 +203,7 @@ namespace KidsFlixSystem.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 4, 3, 17, 4, 26, 606, DateTimeKind.Utc).AddTicks(1874));
+                        .HasDefaultValue(new DateTime(2024, 4, 3, 15, 20, 28, 894, DateTimeKind.Utc).AddTicks(810));
 
                     b.Property<string>("Description")
                         .IsRequired()
